@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio de Fotografia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+        .project-card, .photo-card {
+            background-color: #1a1a1a;
+            border: 2px solid #333333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: none; /* Remove a sombra para um visual mais duro */
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .project-card:hover, .photo-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: #ffffff; /* Borda branca no hover para destacar */
+        }
+        .project-card img, .photo-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            /* Filtro de escala de cinza para todas as imagens */
+            filter: grayscale(100%);
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        .card-description {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header com Imagem de Fundo -->
+    <header class="relative bg-black text-white py-12 min-h-[400px]">
+        <!-- Fundo da imagem com overlay escuro -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('URL_DA_SUA_IMAGEM_DO_MONGE_AQUI'); filter: grayscale(100%);">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+
+        <!-- Conteúdo do cabeçalho (logo e navegação) -->
+        <div class="container relative z-10 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left h-full">
+            <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
+                <h1 class="text-5xl font-bold uppercase mb-2">Portfólio Marginal</h1>
+                <p class="text-lg">Fotografia Urbana e Intimista</p>
+            </div>
+            <nav>
+                <ul class="flex space-x-4 text-gray-300 uppercase">
+                    <li><a href="#projects" class="hover:text-white transition-colors duration-200">Projetos</a></li>
+                    <li><a href="#gallery" class="hover:text-white transition-colors duration-200">Galeria</a></li>
+                    <li><a href="#contact" class="hover:text-white transition-colors duration-200">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Seção de Projetos -->
+        <section id="projects" class="py-12">
+            <h2 class="text-4xl font-bold text-center mb-8 uppercase">Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Exemplo de Card de Projeto -->
+                <div class="project-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/600x400/000000/FFFFFF?text=Urbano" alt="Urban Project">
+                    <div class="card-content">
+                        <h3 class="card-title">Cidades Vivas</h3>
+                        <p class="card-description">A série que captura a crueza e a vida secreta das ruas, revelando histórias invisíveis na arquitetura.</p>
+                    </div>
+                </div>
+                
+                <!-- Adicione mais cards de projeto aqui -->
+                <div class="project-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/600x400/000000/FFFFFF?text=Intimista" alt="Intimate Photography">
+                    <div class="card-content">
+                        <h3 class="card-title">Corpo e Alma</h3>
+                        <p class="card-description">Um olhar intimista sobre a forma humana, explorando a vulnerabilidade e a força da expressão corporal.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/600x400/000000/FFFFFF?text=Marginal" alt="Marginal Photography">
+                    <div class="card-content">
+                        <h3 class="card-title">Retratos Marginas</h3>
+                        <p class="card-description">A colecção de personagens e lugares à margem da sociedade, capturando uma beleza sem filtro.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Separador -->
+        <hr class="border-gray-800 my-12">
+
+        <!-- Seção de Galeria de Fotos -->
+        <section id="gallery" class="py-12">
+            <h2 class="text-4xl font-bold text-center mb-8 uppercase">Galeria</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Exemplo de Card de Foto -->
+                <div class="photo-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Foto+1" alt="Foto 1">
+                </div>
+                
+                <div class="photo-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Foto+2" alt="Foto 2">
+                </div>
+
+                <div class="photo-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Foto+3" alt="Foto 3">
+                </div>
+
+                <div class="photo-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Foto+4" alt="Foto 4">
+                </div>
+
+                <div class="photo-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Foto+5" alt="Foto 5">
+                </div>
+                
+                <div class="photo-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Foto+6" alt="Foto 6">
+                </div>
+
+                <div class="photo-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Foto+7" alt="Foto 7">
+                </div>
+
+                <div class="photo-card">
+                    <!-- Substitua o link da imagem (src) pela sua foto -->
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Foto+8" alt="Foto 8">
+                </div>
+                
+                <!-- Adicione mais cards de foto aqui -->
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contact" class="bg-black py-8 text-center text-gray-500">
+        <div class="container">
+            <p>&copy; 2024 Portfólio de Fotografia. Todos os direitos reservados.</p>
+            <p>Entre em contato: <a href="mailto:seuemail@exemplo.com" class="hover:text-white transition-colors duration-200">seuemail@exemplo.com</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
